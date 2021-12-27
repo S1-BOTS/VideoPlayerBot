@@ -1,19 +1,16 @@
 """
-VideoPlayerBot, Telegram Video Chat Bot
-Copyright (c) 2021  Asm Safone <https://github.com/AsmSafone>
+Este programa es un software gratuito: puede redistribuirlo y / o modificarlo
+En los términos de la licencia pública general de GNU Affer, según lo publicado por
+la Fundación Software Free, ya sea la versión 3 de la licencia, o
+(a su opción) cualquier versión posterior.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Este programa se distribuye con la esperanza de que sea útil,
+Pero sin ninguna garantía;Sin ni siquiera la garantía implícita de
+Comercibilidad o aptitud para un propósito particular.Ver el
+Licencia pública general de GNU AFFERO para más detalles.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>
+Debería haber recibido una copia de la licencia pública general de GNU AFFERO.
+junto con este programa.Si no, consulte
 """
 
 import os
@@ -37,7 +34,7 @@ async def main():
     await bot.start()
     Config.BOT_USERNAME = (await bot.get_me()).username
     await group_call.start()
-    LOGGER.warning(f"{Config.BOT_USERNAME} Started Successfully !")
+    LOGGER.warning(f"{Config.BOT_USERNAME} Comenzó con éxito !")
     if Config.IS_NONSTOP_STREAM:
         await start_stream()
     try:
@@ -48,7 +45,7 @@ async def main():
         print(e)
         pass
     await idle()
-    LOGGER.warning("Video Player Bot Stopped !")
+    LOGGER.warning("Video Player Bot se detuvo !")
     await bot.stop()
 
 if __name__ == '__main__':
